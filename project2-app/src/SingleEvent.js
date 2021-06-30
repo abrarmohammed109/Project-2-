@@ -1,16 +1,17 @@
-import React from 'react'
-import {useEffect,useState} from 'react'
+import { buildQueries } from '@testing-library/react'
+import React, { useEffect } from 'react'
+import {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 function SingleEvent(props){
 
-    console.log(props.match.params.id)
 
-    const [event, setEvent] = useState([])
+    const [event, setEvent] = useState(null)
 
     const getEvent = async () => {
         const API_ENDPOINT = 'https://app.ticketmaster.com/discovery/v2/events?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*'
         try{
-            const response = await fetch(API_ENDPOINT+props.match.params.id)
+            const response = await fetch(API_ENDPOINT)
             const data = await response.json()
 
             setEvent(data._embedded.events)
@@ -33,3 +34,5 @@ function SingleEvent(props){
 }
 
 export default SingleEvent
+
+// `https://app.ticketmaster.com/discovery/v2/events/${}?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*`
