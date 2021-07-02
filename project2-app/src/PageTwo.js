@@ -1,18 +1,14 @@
-import { buildQueries } from '@testing-library/react'
 import React, { useEffect } from 'react'
 import {useState} from 'react'
-import { Route, Link } from "react-router-dom";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
+function PageTwo(){
 
-import PageTwo from './PageTwo';
-
-function AllEvents(){
-
+    
     const [events, setEvents] = useState([])
     
     const getEvents = async () => {
-        const API_ENDPOINT = 'https://app.ticketmaster.com/discovery/v2/events?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*'
+        const API_ENDPOINT = 'https://app.ticketmaster.com/discovery/v2/events?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*&page=20'
         try{
             const response = await fetch(API_ENDPOINT)
             const data = await response.json()
@@ -26,7 +22,7 @@ function AllEvents(){
     useEffect(()=>{
        getEvents()
     },[])
-    console.log(events)
+
     return(
         <section>
             {events.map((event)=>{
@@ -40,7 +36,7 @@ function AllEvents(){
                                 <h2><a href={event.url} target="_blank"> {event.name}</a></h2>
                                 <h3>Date: {event.dates.start.localDate}</h3>
                                 <h3>Location: {event._embedded.venues[0].name}</h3>
-                                <button>Buy</button>
+                                <button className='button'>Buy</button>
                                 <hr></hr>
                             </div>
                         </div>
@@ -62,12 +58,7 @@ function AllEvents(){
                 
             </div>
         </section>
-
     )
 }
 
-export default AllEvents
-
-
-{/* <Link to={`/details/${event.id}`} key={event.id}>  
-</Link>  */}
+export default PageTwo

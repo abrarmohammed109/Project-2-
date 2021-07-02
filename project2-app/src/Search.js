@@ -5,12 +5,19 @@ import { Link } from 'react-router-dom'
 
 function Search () {
     return (
-        <div>
-            <form>
-                <input type='text'></input>
-                <button>Search</button>
-            </form>
-        </div>
+
+        <h1>hello</h1>
+        // <form onSubmit={handleSubmit}>
+        //     <label htmlFor='name'>First and Last Name:</label>
+        //     <input type='text' id='name' onChange={handleChange} />
+
+        //     <label htmlFor='event-name'>Event Name:</label>
+        //     <input type='text' id='event-name' onChange={handleChange} />
+
+        //     <label htmlFor='email'>Email:</label>
+        //     <input type='text' id='email' onChange={handleChange} />
+        //     <input type='submit' />
+        // </form>
     )
 }
 

@@ -1,3 +1,5 @@
+#root{background-color:rgb(89, 187, 205);}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,27 +15,57 @@ code {
 }
 
 .top{
-  background-color: grey;
+  background-color:rgb(118, 178, 230);
   display: flex;
   margin-bottom: 30px;
+  font-family: 'Fredoka One', cursive;
+
 }
 
 .home{
   margin-right: 450px;
 }
 
-.search{}
+.event{
+
+}
 
 .about{
   margin-right: 30px;
   margin-left: 30px;
 }
 
-.buy{
-
+.search{
   margin-right: 50px;
 }
 
-.nav{
-margin-right: 70px;
+.buy{
+
+  margin-right: 50px;
+
 }
+
+.nav{
+margin-right: 550px;
+}
+
+.pages{
+  background-color: white;
+  margin: auto;
+  width: 15%;
+
+
+  
+}
+
+.pg2,.pg3,.pg4,.pg5,.pg6,.pg7,.pg8,.pg9{
+  float: left;
+  margin-right: 5px;
+}
+
+.event-name{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+
+
