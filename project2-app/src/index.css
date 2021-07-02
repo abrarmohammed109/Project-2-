@@ -45,6 +45,7 @@ code {
 
 }
 
+
 .nav{
 margin-right: 550px;
 }
@@ -67,5 +68,17 @@ margin-right: 550px;
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
+.button{
+	background: purple;
+	padding: 15px;
+  color: white;
+	border-radius: 10px;
+
+}
+
+.button:hover{
+  cursor: pointer;
+  box-shadow:0 10px 10px 0 lavender;
+}
 
 

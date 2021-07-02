@@ -26,7 +26,7 @@ function App() {
           </h1>
 
           <h1 className='search' className='nav'>
-            <a href='/search'> Search</a>
+            <a href='/search'> MAKE YOUR OWN EVENT</a>
           </h1>
 
           <h1 className='buy'className='nav'>

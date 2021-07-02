@@ -36,7 +36,7 @@ function PageSix(){
                                 <h2><a href={event.url} target="_blank"> {event.name}</a></h2>
                                 <h3>Date: {event.dates.start.localDate}</h3>
                                 <h3>Location: {event._embedded.venues[0].name}</h3>
-                                <button>Buy</button>
+                                <button className='button'>Buy</button>
                                 <hr></hr>
                             </div>
                         </div>
